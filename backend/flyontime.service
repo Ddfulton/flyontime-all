@@ -1,0 +1,26 @@
+[Unit]
+Description=FlyOnTime Backend
+After=network.target libvirtd.service  # does not care about this either
+Wants=libvirtd.service  # does not want this
+
+[Service]
+NoNewPrivileges=false
+Type=simple
+User=ccloud
+Group=ccloud
+WorkingDirectory=/home/ccloud/slave
+Environment=PATH=/home/ccloud/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ExecStart=/home/ccloud/.local/bin/uv run app.py
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=ccloud-slave
+
+# Security settings
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/home/ccloud/flyontime-all/backend
+
+[Install]
+WantedBy=multi-user.target
