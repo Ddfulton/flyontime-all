@@ -1,0 +1,59 @@
+#parent-div {
+  display: inline-flex;
+  flex-wrap: wrap;
+  /* for horizontal aligning of child divs */
+  margin-left: 30px;
+  justify-content: center; 
+  /* for vertical aligning */
+  /* align-items: center; */
+} 
+
+.child-div {
+  width: 100px;/* yoursize for each div */
+  margin-left: 5px;
+  margin-right: 5px;
+} 
+
+.child-div h1 {
+  text-align: center;
+  /* font-size: 1.5em; */
+  font-weight: bold;
+  /* margin: 0;
+  padding: 0; */
+}
+
+/* #menu-outer {
+	height: 84px;
+	background: url(images/bar-bg.jpg) repeat-x;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	/* margin: 0 auto;
+} */
+
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+
+	ul#horizontal-list li {
+		display: inline;
+	} 
+
+
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  h1.flyontime-mini-header {
+      color: black;
+  }
+}
+   
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  h1.flyontime-mini-header {
+      color: white;
+  }
+}
