@@ -282,7 +282,7 @@ async function fillDiv(div, params) {
     div.innerText = "Loading...";
 
     // Make the API call
-    var api_base = 'https://romulus.tail8ddf.ts.net/'
+    var api_base = 'https://jupiter.tail8ddf.ts.net/'
     var API_URL = api_base +
         dayOfWeek + "/" + 
         monthOfYear + "/" + 

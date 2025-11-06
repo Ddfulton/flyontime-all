@@ -1,2 +1,7 @@
-*.pkl
-*.parquet
+*pkl
+*parquet
+data
+*gz
+.python-version
+*zip
+*DS_Store
